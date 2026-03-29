@@ -23,7 +23,10 @@ cd TP_Logiciel_embarqu-_YOMBA_BEAUSON-MEYER
 # Compiler le projet
 cargo build --release
 ````
-Nous avons enregistré chaque étape dans le **bin**.
+
+Nous avons enregistré chaque étape dans le **bin** : 
+* Dans `partie3.rs` vous trouverez le code permettant l'identification des trames de type **beacon** correspondant aux trames DroneID et l'extraction des données pertinentes de ces trames.
+* `partie4.rs`: nous avons ajouté la fonctionnalité de sauvegarde des résultats dans un fichier. L'utilisateur peut désormais spécifier le format de sortie (JSON, CSV) et le nom du fichier de sortie via des arguments de ligne de commande.
 
 Le programme final se trouve dans le fichier `partie5.rs`, écrivez ces lignes dans le terminal pour le lancer :
 ```
