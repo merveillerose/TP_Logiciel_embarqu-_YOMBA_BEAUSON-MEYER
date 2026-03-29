@@ -11,7 +11,7 @@ L'objectif était d'identifier les trames Wifi d'identification et de localisati
 * **Architecture modulaire** : Séparation de la logique de décodage dans une bibliothèque (`lib.rs`) pour une meilleure maintenabilité.
 
 ## Installation
-Assurez-vous d'avoir [Rust et Cargo](https://rustup.rs/) installés sur votre machine.
+Il faut s'assurer d'avoir Rust et Cargo (https://rustup.rs/) installés sur votre machine.
 
 ```
 # Cloner le projet
@@ -24,19 +24,14 @@ cd TP_Logiciel_embarqu-_YOMBA_BEAUSON-MEYER
 cargo build --release
 ````
 Nous avons enregistré chaque étape dans le **bin**.
-Pour lancer le programme final qui se trouve dans le fichier partie5.rs, écrivez ces lignes dans le terminal :
+
+Le programme final se trouve dans le fichier `partie5.rs`, écrivez ces lignes dans le terminal pour le lancer :
 ```
 cargo run --bin partie5 -- --pcap [CHEMIN_FICHIER] --packet-count [NB_PAQUETS] --output-format [json/csv]
-
 ```
 
 ### Exemple de commandes
-* Analyse simple :
+* Analyse simple de 10 paquets, enregistrement automatique des résultats dans un fichier **JSON** nommé `results.json`:
 ```
-cargo run --bin partie5 -- --pcap capture-23-05-08-ttgo.pcapng
-```
-
-* Analyse complète avec export CSV :
-```
-cargo run --bin partie5 -- --pcap capture-23-05-08-ttgo.pcapng -P 100 -F csv -o resultats.csv
+cargo run --bin partie5 -- --pcap capture-23-05-08-ttgo.pcapng --packet-count 10
 ```
